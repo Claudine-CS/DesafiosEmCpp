@@ -10,8 +10,7 @@ struct Aluno {
     float mediaFinal;
 };
 
-void cadastrarAluno(Aluno lista[], int &quant) {
-    int i;
+void cadastrarAluno(Aluno lista[], int i) {
     cout << "Cadastrar aluno " << i + 1 << endl;
     cout << "Digite o nome: ";
     getline(cin, lista[i].nome);
@@ -26,6 +25,7 @@ void cadastrarAluno(Aluno lista[], int &quant) {
     cout <<"Digite a media final: ";
     cin >> lista[i].mediaFinal;
     cin.ignore();
+    cout << endl;
     
 }
 
@@ -54,9 +54,11 @@ int main() {
                 cin >> quant;
                 cin.ignore();
                 
-                for (i = 0; i < quant; i++);{
+                for (i = 0; i < quant; i++){
                     cadastrarAluno(lista, i);
                 }
+                
+                cout << "Alunos cadastrados com sucesso!" << endl;
                 
                 break;
         }
